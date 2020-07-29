@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 625 305" style="enable-background:new 0 0 625 305;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4C4C4C;}
+	.st1{font-family:'MrEavesModOT-Book';}
+	.st2{font-size:22.0259px;}
+	.st3{font-size:18px;}
+	.st4{fill:none;stroke:#4C4C4C;stroke-miterlimit:10;}
+</style>
+<g id="Layer_1">
+	<g>
+		<text transform="matrix(1 0 0 1 301.4474 74.7485)"><tspan x="0" y="0" class="st0 st1 st2">App</tspan><tspan x="-4.32" y="21.6" class="st0 st1 st3">(state)</tspan></text>
+		<rect x="248.84" y="46" class="st4" width="134.33" height="69"/>
+		<text transform="matrix(1 0 0 1 283.9376 218.7485)"><tspan x="0" y="0" class="st0 st1 st2">NewsList</tspan><tspan x="10.83" y="21.6" class="st0 st1 st3">(props)</tspan></text>
+		<rect x="248.84" y="190" class="st4" width="134.33" height="69"/>
+		<text transform="matrix(1 0 0 1 477.2653 218.7485)"><tspan x="0" y="0" class="st0 st1 st2">Article</tspan><tspan x="1.51" y="21.6" class="st0 st1 st3">(props)</tspan></text>
+		<rect x="432.84" y="190" class="st4" width="134.33" height="69"/>
+		<text transform="matrix(1 0 0 1 98.3111 218.7485)"><tspan x="0" y="0" class="st0 st1 st2">Header</tspan><tspan x="5.46" y="21.6" class="st0 st1 st3">(props)</tspan></text>
+		<rect x="57.84" y="190" class="st4" width="134.33" height="69"/>
+		<line class="st4" x1="316" y1="115" x2="315.66" y2="167.5"/>
+		<line class="st4" x1="125" y1="138.5" x2="124.66" y2="167.5"/>
+		<line class="st4" x1="499.66" y1="139.42" x2="124.66" y2="139.08"/>
+		<polygon class="st0" points="124.93,175.7 122.57,171.6 120.2,167.5 124.93,167.5 129.66,167.5 127.3,171.6 		"/>
+		<line class="st4" x1="500" y1="138.5" x2="499.66" y2="167.5"/>
+		<polygon class="st0" points="499.93,175.7 497.57,171.6 495.2,167.5 499.93,167.5 504.66,167.5 502.3,171.6 		"/>
+		<polygon class="st0" points="315.93,175.7 313.57,171.6 311.2,167.5 315.93,167.5 320.66,167.5 318.3,171.6 		"/>
+	</g>
+</g>
+<g id="Layer_2">
+</g>
+</svg>

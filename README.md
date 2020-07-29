@@ -1,68 +1,164 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Carpe Diem Dashboard
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+Carpe Diem is a dashboard designed to get users ready for the day. Relevant information helps users decide how to go about their day by showing them the top news, weather forecast, and an inspirational quote. Stage two (stretch goals) will incorporate their To-Do's and schedule for a more rounded
 
-### `npm start`
+## Wireframes
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img src="./public/carpe-diem-wireframe.svg" alt="Home view" width="500"/>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<img src="./public/carpe-diem-wireframe-expanded.svg" alt="Expanded view" width="500"/>
 
-### `npm test`
+## User Stories
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### _MVP User Stories_
 
-### `npm run build`
+- _As a user, I want to see snippets of the top 5 news stories on New York Times so that I can be informed as to what is going on in the world today._
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- _As a user, I want to be able to click on a story if it interests me so that I can read the full article._
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### _Post MVP Silver Goals_
 
-### `npm run eject`
+- _As a user, I want to see what the weather is going to be like today so that I can know what to expect, what to wear, and wether or not to bring an umbrella._
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- _As a user, I want to see a random quote that will make me laugh or inspire me so that I can approach the day with lightness and a sense of play._
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### _Post MVP Gold Goals_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- _As a user, I want to have a to-do list where I can see the tasks I need to accomplish today._
 
-## Learn More
+- _As a user, I want to have my schedule for the day to be aware of any meetings I might have._
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+## API
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+[NYT Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
 
-### Analyzing the Bundle Size
+#### NYT Top Stories response
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+    {
+    	status: "OK",
+    	copyright: "Copyright (c) 2020 The New York Times Company. All Rights Reserved.",
+    	section: "home",
+    	last_updated: "2020-07-29T01:16:29-04:00",
+    	num_results: 55,
+    	results:  [
+    	 {
+    	section: "us",
+    	subsection: "politics",
+    	title: "Barr Clashes With House Democrats, Defending Responses to Protests and Russia Inquiry",
+    	abstract: "The deployment of federal agents to confront protesters and rioters and attacks on the Russia investigation highlighted a contentious hearing.",
+    	url: "https://www.nytimes.com/2020/07/28/us/politics/barr-testimony.html",
+    	uri: "nyt://article/bd6071f6-800f-53f4-bb25-25c50999aa64",
+    	byline: "By Nicholas Fandos and Charlie Savage",
+    	item_type: "Article",
+    	updated_date: "2020-07-29T01:15:46-04:00",
+    	created_date: "2020-07-28T19:02:49-04:00",
+    	published_date: "2020-07-28T19:02:49-04:00",
+    	material_type_facet: "",
+    	kicker: "",
+    	des_facet:  [
+    	"Police Reform",
+    	"George Floyd Protests (2020)",
+    	"United States Politics and Government",
+    	"Russian Interference in 2016 US Elections and Ties to Trump Associates",
+    	"Special Prosecutors (Independent Counsel)"
+    	],
+    	org_facet:  [
+    	"House Committee on the Judiciary",
+    	"Justice Department"
+    	],
+    	per_facet:  [
+    	"Barr, William P",
+    	"Mueller, Robert S III",
+    	"Jordan, Jim (1964- )",
+    	"Nadler, Jerrold",
+    	"Stone, Roger J Jr",
+    	"Trump, Donald J"
+    	],
+    	geo_facet: [ ],
+    	multimedia:  [
+    	 {
+    	url: "https://static01.nyt.com/images/2020/07/28/us/politics/28dc-barr1/merlin_175037451_6440ff51-e1c6-45f2-9f62-481f1775936b-superJumbo.jpg",
+    	format: "superJumbo",
+    	height: 1365,
+    	width: 2048,
+    	type: "image",
+    	subtype: "photo",
+    	caption: "Attorney General William P. Barr testified before Congress on Tuesday for the first time in over a year.",
+    	copyright: "Pool photo by Chip Somodevilla"
+    	},
+    	 {
+    	url: "https://static01.nyt.com/images/2020/07/28/us/politics/28dc-barr1/28dc-barr1-thumbStandard.jpg",
+    	format: "Standard Thumbnail",
+    	height: 75,
+    	width: 75,
+    	type: "image",
+    	subtype: "photo",
+    	caption: "Attorney General William P. Barr testified before Congress on Tuesday for the first time in over a year.",
+    	copyright: "Pool photo by Chip Somodevilla"
+    	},
+    	 {
+    	url: "https://static01.nyt.com/images/2020/07/28/us/politics/28dc-barr1/28dc-barr1-thumbLarge.jpg",
+    	format: "thumbLarge",
+    	height: 150,
+    	width: 150,
+    	type: "image",
+    	subtype: "photo",
+    	caption: "Attorney General William P. Barr testified before Congress on Tuesday for the first time in over a year.",
+    	copyright: "Pool photo by Chip Somodevilla"
+    	},
+    	 {
+    	url: "https://static01.nyt.com/images/2020/07/28/us/politics/28dc-barr1/merlin_175037451_6440ff51-e1c6-45f2-9f62-481f1775936b-mediumThreeByTwo210.jpg",
+    	format: "mediumThreeByTwo210",
+    	height: 140,
+    	width: 210,
+    	type: "image",
+    	subtype: "photo",
+    	caption: "Attorney General William P. Barr testified before Congress on Tuesday for the first time in over a year.",
+    	copyright: "Pool photo by Chip Somodevilla"
+    	},
+    	 {
+    	url: "https://static01.nyt.com/images/2020/07/28/us/politics/28dc-barr1/merlin_175037451_6440ff51-e1c6-45f2-9f62-481f1775936b-articleInline.jpg",
+    	format: "Normal",
+    	height: 127,
+    	width: 190,
+    	type: "image",
+    	subtype: "photo",
+    	caption: "Attorney General William P. Barr testified before Congress on Tuesday for the first time in over a year.",
+    	copyright: "Pool photo by Chip Somodevilla"
+    	}
+    	],
+    	short_url: "https://nyti.ms/39AjmoQ"
+    	}
 
-### Making a Progressive Web App
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+[Kanye.rest API](https://kanye.rest/)
 
-### Advanced Configuration
+#### Kanye.rest response
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+    {"quote":"Sometimes I push the door close button on people running towards the elevator. I just need my own elevator sometimes. My sanctuary."}
 
-### Deployment
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Component Hierarchy
 
-### `npm run build` fails to minify
+<img src="./public/carpe-diem-hierarchy.svg" alt="Home view" width="500"/>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Component details:
+
+| **Component** | **Description**                                       | **State/Props** |
+| ------------- | ----------------------------------------------------- | :-------------: |
+| App           | This will handle React Router and call the components |      State      |
+| Header        | This will render the header in the nav                |      Props      |
+| NewsList      | This will render the top 5 articles                   |      Props      |
+| Article       | This will render the individual article               |      Props      |
