@@ -150,9 +150,9 @@ Carpe Diem is a dashboard designed to get users ready for the day. Relevant info
 
 #### Component details:
 
-| **Component** | **Description**                                       | **State/Props** |
-| ------------- | ----------------------------------------------------- | :-------------: |
-| App           | This will handle React Router and call the components |      State      |
-| Header        | This will render the header in the nav                |      Props      |
-| NewsList      | This will render the top 5 articles                   |      Props      |
-| Article       | This will render the individual article               |      Props      |
+| **Component** | **Description**                                         | **State/Props** |
+| ------------- | ------------------------------------------------------- | :-------------: |
+| App           | This will handle React Router and invoke the components |      State      |
+| Header        | This will render the header in the nav                  |      Props      |
+| NewsList      | This will render the top 5 articles                     |      Props      |
+| Article       | This will render the individual article                 |      Props      |

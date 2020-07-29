@@ -1,0 +1,16 @@
+h1 {
+	color: black;
+}
+
+.news-list {
+    width: 75vmax;
+    margin: auto;
+
+}
+
+.news-list-grid {
+    color: coral;
+    grid-template-columns: auto auto auto auto auto;
+    display: grid;
+    grid-gap: 10px;
+}
