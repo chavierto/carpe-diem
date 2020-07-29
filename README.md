@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Carpe Diem is a dashboard designed to get users ready for the day. Relevant information helps users decide how to go about their day by showing them the top news, weather forecast, and an inspirational quote. Stage two (stretch goals) will incorporate their To-Do's and schedule for a more rounded
+Carpe Diem is a dashboard designed to get users ready for the day. Relevant information helps users decide how to go about it by showing them the top news, weather forecast, and an inspirational quote. Stage two (stretch goals) will incorporate their To-Do's and schedule for a more rounded overview.
 
 ## Wireframes
 
@@ -18,23 +18,17 @@ Carpe Diem is a dashboard designed to get users ready for the day. Relevant info
 
 - _As a user, I want to be able to click on a story if it interests me so that I can read the full article._
 
----
-
 ### _Post MVP Silver Goals_
 
 - _As a user, I want to see what the weather is going to be like today so that I can know what to expect, what to wear, and wether or not to bring an umbrella._
 
 - _As a user, I want to see a random quote that will make me laugh or inspire me so that I can approach the day with lightness and a sense of play._
 
----
-
 ### _Post MVP Gold Goals_
 
 - _As a user, I want to have a to-do list where I can see the tasks I need to accomplish today._
 
 - _As a user, I want to have my schedule for the day to be aware of any meetings I might have._
-
----
 
 <br>
 
