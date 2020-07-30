@@ -4,12 +4,14 @@ import './NewsCard.css'
 class NewsCard extends Component {
     render() {
         return (
-					<div className ='news-card'>
+					<div className='news-card'>
 						<div>
-							<p>image</p>
+							<img
+								src={this.props.article.multimedia[2].url}
+								alt={this.props.article.multimedia[2].caption}></img>
 						</div>
 						<div>
-							<p>text</p>
+							<p>{this.props.article.title}</p>
 						</div>
 					</div>
 				);

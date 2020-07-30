@@ -4,6 +4,20 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
+import axios from 'axios';
+
+
+
+// axios.interceptors.request.use(
+// 	function (config) {
+// 		config.headers['api-key'] = process.env.REACT_APP_CARPE_DIEM_NYT;
+// 		return config;
+// 	},
+// 	function (error) {
+// 		return Promise.reject(error);
+// 	}
+// );
+
 
 ReactDOM.render(
 	<Router>

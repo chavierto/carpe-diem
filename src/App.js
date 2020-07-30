@@ -1,16 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import Header from './Header/Header';
-import NewsList from './NewsList/NewsList'
+import Quote from './Quote/Quote'
+import NewsList from './NewsList/NewsList';
 
-function App() {
-	return (
-		<div className='App'>
-			<Header />
-      <NewsList />
-		</div>
-	);
+class App extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			news: {},
+		};
+	}
+
+	NYTnews = (res) => {
+		this.setState({ res });
+	};
+
+	render() {
+		return (
+			<div className='App'>
+				<Header />
+				<Quote />
+				<NewsList bird={this.state.news} NYTnews={this.NYTnews}/>
+			</div>
+		);
+	}
 }
 
 export default App;
