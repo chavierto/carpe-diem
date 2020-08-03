@@ -21,9 +21,13 @@ class Quote extends Component {
 
 	render() {
 		return (
-			<div>
-				<h3 className='kanye'>Kanye of the day:</h3>
-				<h2>{this.state.quote}</h2>
+			<div className='quote-box'>
+				<div className='kanye-title'>
+					<p>Kanye of the day:</p>
+				</div>
+				<div className='kanye-quote'>
+					<p>{this.state.quote}</p>
+				</div>
 			</div>
 		);
 	}

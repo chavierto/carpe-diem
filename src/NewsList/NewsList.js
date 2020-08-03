@@ -26,9 +26,10 @@ class NewsList extends Component {
 	}
 
 	handleShow = (index) => {
-		this.setState({ show: true, currentArticle: this.state.newsArr.slice(0,5)[index] });
-		// console.log(this.state.newsArr.slice(0, 5));
-		// console.log(index);
+		this.setState({
+			show: true,
+			currentArticle: this.state.newsArr.slice(0, 5)[index],
+		});
 	};
 
 	handleClose = () => {
@@ -50,10 +51,23 @@ class NewsList extends Component {
 						})}
 				</div>
 				<Modal show={this.state.show} onHide={this.handleClose}>
-					<Modal.Title>
-						{this.state.currentArticle &&
-							this.state.currentArticle.abstract}
+					<Modal.Title onClick=''>
+						{this.state.currentArticle && this.state.currentArticle.abstract}
 					</Modal.Title>
+					<Modal.Body>
+						{this.state.currentArticle && (
+							<img
+								className='modal-img'
+								alt={this.state.currentArticle.multimedia[0].caption}
+								src={this.state.currentArticle.multimedia[0].url}
+							/>
+						)}
+						{this.state.currentArticle && (
+							<p>
+								<a href={this.state.currentArticle.url}target='_blank' rel='noopener noreferrer'>Link to article</a>
+							</p>
+						)}
+					</Modal.Body>
 				</Modal>
 				<img
 					className='nyt-logo'

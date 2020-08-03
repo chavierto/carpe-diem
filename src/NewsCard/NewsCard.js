@@ -10,7 +10,7 @@ class NewsCard extends Component {
 								src={this.props.article.multimedia[2].url}
 								alt={this.props.article.multimedia[2].caption}></img>
 						</div>
-						<div>
+						<div className='article-title'>
 							<p>{this.props.article.title}</p>
 						</div>
 					</div>

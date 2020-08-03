@@ -1,5 +1,17 @@
 .news-card {
+	display: flex;
 	border-color: black;
 	border: black;
 	border-style: solid;
+	font-weight: 200;
+	flex: 1 100%;
+}
+
+.article-title {
+	display: flex;
+	padding: 0.5rem;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Open Sans';
+	max-height: 150px;
 }

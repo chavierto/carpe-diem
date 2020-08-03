@@ -3,25 +3,49 @@ h1 {
 }
 
 .news-list {
-    width: 75vmax;
-    margin: auto;
-
+	/* width: 75vmax; */
+	margin: 10px;
 }
 
 .news-list-grid {
-    color: coral;
-    grid-template-columns: auto auto auto auto auto;
-    display: grid;
-    grid-gap: 10px;
-    max-width: 150px;   
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .news-title {
-    font-style: normal;
-    text-align: left;
+	text-align: left;
+	font-size: x-large;
 }
 
 .nyt-logo {
-    position: absolute;
-    left: 0px;
+	position: absolute;
+	padding-top: 1rem;
+	left: 0px;
+}
+
+.modal-body {
+	/* display: grid; */
+	/* background-color: coral; */
+	text-align: center;
+	font-family: 'Oswald';
+}
+
+.modal-title {
+    text-align: center;
+    padding: 2rem;
+	font-family: 'Oswald';
+}
+
+.modal-img {
+	max-width: 80%;
+}
+
+@media (min-width: 850px) {
+	.news-list-grid {
+		display: grid;
+		grid-gap: 1rem;
+		/* grid-template-columns: repeat(5, minmax(150px, 1fr)); */
+		/* grid-template-columns: auto auto auto auto auto; */
+	}
 }

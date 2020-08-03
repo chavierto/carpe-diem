@@ -1,3 +1,17 @@
-h2 {
+.quote-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.kanye-title {
+	padding-top: 1rem;
+	font-size: large;
+	align-items: center;
+}
+
+.kanye-quote {
+	/* padding: 1rem; */
+	font-weight: 200;
 	font-style: italic;
+	font-size: x-large;
 }
