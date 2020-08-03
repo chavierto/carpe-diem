@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import './NewsList.css';
 import NewsCard from '../NewsCard/NewsCard';
 import axios from 'axios';
+import Modal from 'react-bootstrap/Modal';
 
 class NewsList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			newsArr: null,
+			currentArticle: null,
+			show: false,
 		};
 	}
 
@@ -21,35 +24,44 @@ class NewsList extends Component {
 			// .then(this.NYTnews())
 			.catch(console.error);
 	}
+
+	handleShow = (index) => {
+		this.setState({ show: true, currentArticle: this.state.newsArr.slice(0,5)[index] });
+		// console.log(this.state.newsArr.slice(0, 5));
+		// console.log(index);
+	};
+
+	handleClose = () => {
+		this.setState({ show: false, currentArticle: null });
+	};
+
 	render() {
-		console.log(this.state.newsArr);
 		return (
 			<div className='news-list'>
 				<h2 className='news-title'>NYT Top News:</h2>
 				<div className='news-list-grid'>
 					{this.state.newsArr &&
-						this.state.newsArr.slice(0, 5).map((article, i) => (
-							<div key={i}>
-								<NewsCard article={article} />
-							</div>
-						))}
+						this.state.newsArr.slice(0, 5).map((article, i) => {
+							return (
+								<div key={i} onClick={(e) => this.handleShow(i)}>
+									<NewsCard article={article} />
+								</div>
+							);
+						})}
 				</div>
-				<img className='nyt-logo' src='https://developer.nytimes.com/files/poweredby_nytimes_150a.png?v=1583354208339' alt='Data provided by The New York Times'></img>
+				<Modal show={this.state.show} onHide={this.handleClose}>
+					<Modal.Title>
+						{this.state.currentArticle &&
+							this.state.currentArticle.abstract}
+					</Modal.Title>
+				</Modal>
+				<img
+					className='nyt-logo'
+					src='https://developer.nytimes.com/files/poweredby_nytimes_150a.png?v=1583354208339'
+					alt='Data provided by The New York Times'
+				/>
 			</div>
 		);
-		// return (
-		// 	<div className='news-list'>
-		// 		<h1>NewsList loads</h1>
-		// 		<div className='news-list-grid'>
-		// 			{for (i = 0; i < 6; i++) {
-		//                 this.props.news.map((article,i) => (
-		//                     <div key={i}>
-		//                         <NewsCard article={article[i]}/>
-		//                     </div>
-		//                 ))}};
-		// 		</div>
-		// 	</div>
-		// );
 	}
 }
 

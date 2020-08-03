@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './Quote.css'
+import './Quote.css';
 
 class Quote extends Component {
 	constructor(props) {
@@ -14,7 +14,6 @@ class Quote extends Component {
 
 		axios(url)
 			.then((res) => {
-                console.log(res);
 				this.setState({ quote: res.data.quote });
 			})
 			.catch(console.error);
@@ -23,8 +22,8 @@ class Quote extends Component {
 	render() {
 		return (
 			<div>
-				<h2>"{this.state.quote}"</h2>
-                <h3 className='kanye'>–Kanye</h3>
+				<h3 className='kanye'>Kanye of the day:</h3>
+				<h2>{this.state.quote}</h2>
 			</div>
 		);
 	}
