@@ -51,7 +51,7 @@ class NewsList extends Component {
 						})}
 				</div>
 				<Modal show={this.state.show} onHide={this.handleClose}>
-					<Modal.Title onClick=''>
+					<Modal.Title>
 						{this.state.currentArticle && this.state.currentArticle.abstract}
 					</Modal.Title>
 					<Modal.Body>
