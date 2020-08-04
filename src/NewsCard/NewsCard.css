@@ -5,6 +5,7 @@
 	border-style: solid;
 	font-weight: 200;
 	flex: 1 100%;
+	margin: 0.5rem 0;
 }
 
 .article-title {
@@ -15,3 +16,13 @@
 	font-family: 'Open Sans';
 	max-height: 150px;
 }
+
+/* @media (min-width: 850px) {
+	.news-card {
+		display: grid;
+		grid-gap: 1rem;
+		max-width: 150px;
+		grid-template-columns: auto auto auto auto auto;
+		grid-template-rows: auto auto auto auto auto;
+	}
+} */

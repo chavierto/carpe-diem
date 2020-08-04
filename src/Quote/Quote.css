@@ -4,14 +4,13 @@
 }
 
 .kanye-title {
-	padding-top: 1rem;
+	padding-top: .5rem;
 	font-size: large;
-	align-items: center;
 }
 
 .kanye-quote {
-	/* padding: 1rem; */
 	font-weight: 200;
 	font-style: italic;
 	font-size: x-large;
+	margin: 0 1rem;
 }

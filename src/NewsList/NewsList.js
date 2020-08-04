@@ -64,16 +64,24 @@ class NewsList extends Component {
 						)}
 						{this.state.currentArticle && (
 							<p>
-								<a href={this.state.currentArticle.url}target='_blank' rel='noopener noreferrer'>Link to article</a>
+								<a
+									href={this.state.currentArticle.url}
+									target='_blank'
+									rel='noopener noreferrer'
+									className='modal-link'>
+									<br />
+									Link to article
+								</a>
 							</p>
 						)}
 					</Modal.Body>
 				</Modal>
-				<img
-					className='nyt-logo'
-					src='https://developer.nytimes.com/files/poweredby_nytimes_150a.png?v=1583354208339'
-					alt='Data provided by The New York Times'
-				/>
+				<div className='nyt-logo'>
+					<img
+						src='https://developer.nytimes.com/files/poweredby_nytimes_150a.png?v=1583354208339'
+						alt='Data provided by The New York Times'
+					/>
+				</div>
 			</div>
 		);
 	}
