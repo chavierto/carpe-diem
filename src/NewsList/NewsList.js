@@ -15,7 +15,7 @@ class NewsList extends Component {
 	}
 
 	componentDidMount() {
-		const url = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_CARPE_DIEM_NYT}`;
+		const url = `https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=${process.env.REACT_APP_CARPE_DIEM_NYT}`;
 
 		axios(url)
 			.then((res) => {
@@ -39,7 +39,7 @@ class NewsList extends Component {
 	render() {
 		return (
 			<div className='news-list'>
-				<h2 className='news-title'>NYT Top News:</h2>
+				<h2 className='news-title'>NYT Top Art News:</h2>
 				<div className='news-list-grid'>
 					{this.state.newsArr &&
 						this.state.newsArr.slice(0, 5).map((article, i) => {
