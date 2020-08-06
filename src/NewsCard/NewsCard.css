@@ -8,6 +8,10 @@
 	margin: 0.5rem 0;
 }
 
+.news-card:hover {
+	box-shadow: 4px 4px #00000066;
+}
+
 .article-title {
 	display: flex;
 	padding: 0.5rem;
